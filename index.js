@@ -205,11 +205,11 @@
                 setTridentVersion(ua, UA);
 
                 // Detect the accurate version
-                // ×¢Òâ£º
-                //  UA.shell = ie, ±íÊ¾Íâ¿ÇÊÇ ie
-                //  µ« UA.ie = 7, ²¢²»´ú±íÍâ¿ÇÊÇ ie7, »¹ÓÐ¿ÉÄÜÊÇ ie8 µÄ¼æÈÝÄ£Ê½
-                //  ¶ÔÓÚ ie8 µÄ¼æÈÝÄ£Ê½£¬»¹ÒªÍ¨¹ý documentMode È¥ÅÐ¶Ï¡£µ«´Ë´¦²»ÄÜÈÃ UA.ie = 8, ·ñÔò
-                //  ºÜ¶à½Å±¾ÅÐ¶Ï»áÊ§Îó¡£ÒòÎª ie8 µÄ¼æÈÝÄ£Ê½±íÏÖÐÐÎªºÍ ie7 ÏàÍ¬£¬¶ø²»ÊÇºÍ ie8 ÏàÍ¬
+                // ×¢ï¿½â£º
+                //  UA.shell = ie, ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ ie
+                //  ï¿½ï¿½ UA.ie = 7, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ie7, ï¿½ï¿½ï¿½Ð¿ï¿½ï¿½ï¿½ï¿½ï¿½ ie8 ï¿½Ä¼ï¿½ï¿½ï¿½Ä£Ê½
+                //  ï¿½ï¿½ï¿½ï¿½ ie8 ï¿½Ä¼ï¿½ï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½ï¿½ÒªÍ¨ï¿½ï¿½ documentMode È¥ï¿½Ð¶Ï¡ï¿½ï¿½ï¿½ï¿½Ë´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ UA.ie = 8, ï¿½ï¿½ï¿½ï¿½
+                //  ï¿½Ü¶ï¿½Å±ï¿½ï¿½Ð¶Ï»ï¿½Ê§ï¿½ï¿½ï¿½ï¿½Îª ie8 ï¿½Ä¼ï¿½ï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ ie7 ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½Çºï¿½ ie8 ï¿½ï¿½Í¬
                 for (v = IE_DETECT_RANGE[0], end = IE_DETECT_RANGE[1]; v <= end; v++) {
                     div.innerHTML = IE_DETECT_TPL.replace(VERSION_PLACEHOLDER, v);
                     if (s.length > 0) {
@@ -288,14 +288,14 @@
                             } else if ((m = ua.match(/Opera Mobi[^;]*/)) && m) {
                                 // Opera Mobile
                                 // ex: Opera/9.80 (Windows NT 6.1; Opera Mobi/49; U; en) Presto/2.4.18 Version/10.00
-                                // issue: ÓÉÓÚ Opera Mobile ÓÐ Version/ ×Ö¶Î£¬¿ÉÄÜ»áÓë Opera »ìÏý£¬Í¬Ê±¶ÔÓÚ Opera Mobile µÄ°æ±¾ºÅÒ²±È½Ï»ìÂÒ
+                                // issue: ï¿½ï¿½ï¿½ï¿½ Opera Mobile ï¿½ï¿½ Version/ ï¿½Ö¶Î£ï¿½ï¿½ï¿½ï¿½Ü»ï¿½ï¿½ï¿½ Opera ï¿½ï¿½ï¿½ï¿½Í¬Ê±ï¿½ï¿½ï¿½ï¿½ Opera Mobile ï¿½Ä°æ±¾ï¿½ï¿½Ò²ï¿½È½Ï»ï¿½ï¿½ï¿½
                                 UA.mobile = m[0];
                             }
                         }
                         // NOT WebKit or Presto
                     } else {
                         // MSIE
-                        // ÓÉÓÚ×î¿ªÊ¼ÒÑ¾­Ê¹ÓÃÁË IE Ìõ¼þ×¢ÊÍÅÐ¶Ï£¬Òò´ËÂäµ½ÕâÀïµÄÎ¨Ò»¿ÉÄÜÐÔÖ»ÓÐ IE10+
+                        // ï¿½ï¿½ï¿½ï¿½ï¿½î¿ªÊ¼ï¿½Ñ¾ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ IE ï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½Ð¶Ï£ï¿½ï¿½ï¿½ï¿½ï¿½äµ½ï¿½ï¿½ï¿½ï¿½ï¿½Î¨Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ IE10+
                         // and analysis tools in nodejs
                         if ((ieVersion = getIEVersion(ua))) {
                             UA[shell = 'ie'] = ieVersion;
@@ -969,7 +969,7 @@
                                 changedTouches,     // TouchList
                                 scale,              // float
                                 rotation            // float
-        ) {
+    ) {
 
         if (touches) {
             touches = createTouchList(target, touches);
@@ -1066,7 +1066,7 @@
                  * from the beginning.
                  */
                 if (UA.android < 4.0 ||
-                    // emulate touch events
+                        // emulate touch events
                     UA.chrome) {
                     /**
                      * Touch APIs are broken in androids older than 4.0.
@@ -1168,7 +1168,7 @@
                     }
 
                     touches.push(document.createTouch(window,
-                            point.target || target,
+                        point.target || target,
                         point.identifier,
                         point.pageX, point.pageY,
                         point.screenX, point.screenY));
@@ -1245,8 +1245,8 @@
             customEvent.initDeviceMotionEvent('devicemotion',
                 false, false,
                 option.acceleration,
-                    option.accelerationIncludingGravity || option.acceleration,
-                    option.rotationRate || {
+                option.accelerationIncludingGravity || option.acceleration,
+                option.rotationRate || {
                     alpha: 0,
                     beta: 0,
                     gamma: 0
@@ -1267,7 +1267,7 @@
      * @method simulate
      * @static
      */
-    window.simulateEvent = function (target, type, options) {
+    var simulateEvent = function (target, type, options) {
         if (UA.ie && UA.ieMode < 10 && type === 'input') {
             return;
         }
@@ -1338,6 +1338,12 @@
             throw "simulate(): Event '" + type + "' can't be simulated.";
         }
     };
+
+    if (typeof module !== 'undefined' && module.exports) {
+        module.exports = simulateEvent;
+    } else {
+        window.simulateEvent = simulateEvent;
+    }
 })();
 
 /**
